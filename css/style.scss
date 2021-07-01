@@ -1,0 +1,140 @@
+@import 'reset';
+
+.is-drawerActive {
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  color: #fff;
+  background-color: #555;
+}
+
+.header__inner {
+  position: relative;
+  z-index: 3;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+}
+
+.drawer-button {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  box-sizing: content-box;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  transition: .3s;
+
+  &:hover,&:focus {
+    background-color: radial-gradient(rgba(255, 255, 255, .2 ),rgba(255, 255, 255, .1 ));
+    box-shadow: 0 0 24px rgba(255, 255, 255, .5 );
+  } 
+}
+
+.drawer-button__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  margin: auto;
+  background-color: #fff;
+  transition: all .3s;
+  box-shadow: 0 0 24px rgba(255, 255, 255, .5 );
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #fff;
+    transition: all .3s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #fff;
+    transition: all .3s;
+  }
+}
+
+.drawer-button[aria-expanded="true"] {
+  .drawer-button__line {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(135deg);
+    }
+  }
+} 
+
+.drawer-menu {
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  background-color: #555;
+}
+
+.drawer-menu[aria-hidden="true"] {
+  display: none;
+}
+
+.drawer-menu[aria-hidden="false"] {
+  display: none;
+}
+
+.drawer-menu__list {
+  padding: 2% 5%;
+}
+
+.drawer-menu__item {
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  border-bottom: 1px solid #fff;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

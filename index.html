@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My JS Components</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="./js/index.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <span class="logo">ロゴ</span>
+          <button id="js-drawer-button" class="drawer-button" type="button" aria-controls="js-drawer-menu" aria-expanded="false" aria-label="メニューを開く場合はこちら">
+            <span class="drawer-button__line"></span>
+          </button>
+        </div>
+        <nav id="js-drawer-menu" class="drawer-menu" aria-hidden="true">
+          <ul class="drawer-menu__list">
+            <li class="drawer-menu__item"><a href="#">モーダル</a></li>
+            <li class="drawer-menu__item"><a href="#">アコーディオン</a></li>
+            <li class="drawer-menu__item">何か</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+</body>
+</html>
