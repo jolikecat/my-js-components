@@ -12,6 +12,8 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous" defer></script>
   <script type="text/javascript" src="./js/index.js" defer></script>
+  <script type="text/javascript" src="./js/particles.min.js" defer></script>
+  <script type="text/javascript" src="./js/particles-setting.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
@@ -26,12 +28,27 @@
         <nav id="js-drawer-menu" class="drawer-menu" aria-hidden="true">
           <ul class="drawer-menu__list">
             <li class="drawer-menu__item"><a href="#">モーダル</a></li>
-            <li class="drawer-menu__item"><a href="#">アコーディオン</a></li>
+            <li class="drawer-menu__item"><a href="#accordion">アコーディオン</a></li>
             <li class="drawer-menu__item">何か</li>
           </ul>
         </nav>
       </div>
     </header>
+    <section class="mv" id="hoge">
+      <h1>My JS Components</h1>
+    </section>
+    <section id="accordion">
+      <div class="inner">
+        <div class="accordion__item">
+          <button id="js-accordion-btn" class="js-accordion-btn" type="button" aria-expanded="false" aria-controls="js-accordion-details"><span class="accordion__heading-text">アコーディオン</span></button>
+          <div class="js-accordion-details" aria-hidden="true">なかみ！</div>
+        </div>
+        <div class="accordion__item">
+          <button class="js-accordion-btn" type="button" aria-expanded="false" aria-controls="js-accordion-details"><span class="accordion__heading-text">アコーディオン</span></button>
+          <div class="js-accordion-details" aria-hidden="true">なかみ！</div>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 </html>
