@@ -25,9 +25,6 @@ $(function () {
 
   for (let i = 0; i < accordionBottun.length; i++) {
     accordionBottun[i].addEventListener('click', () => {
-      let clickedAccordion = accordionBottun[i].getAttribute('aria-controls');
-      console.log(clickedAccordion);
-  
       if (accordionBottun[i].getAttribute('aria-expanded') == 'false') {
         accordionBottun[i].setAttribute('aria-expanded', true);
         accordionBottun[i].nextElementSibling.setAttribute('aria-hidden', false);
@@ -37,7 +34,22 @@ $(function () {
         accordionBottun[i].nextElementSibling.setAttribute('aria-hidden', true);
         $('.js-accordion-details[aria-hidden="true"]').stop().slideUp(500);
       }
-    }, false);
+    });
   }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+	const tabs = document.getElementsByClassName('tab__item');
+	for(let i = 0; i < tabs.length; i++) {
+		tabs[i].addEventListener('click', tabSwitch);
+	}
+
+	function tabSwitch(){
+		document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+		this.classList.add('is-active');
+		document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+		const arrayTabs = Array.prototype.slice.call(tabs);
+		const index = arrayTabs.indexOf(this);
+		document.getElementsByClassName('tab')[index].classList.add('is-show');
+	};
 });

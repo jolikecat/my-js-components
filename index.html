@@ -27,9 +27,8 @@
         </div>
         <nav id="js-drawer-menu" class="drawer-menu" aria-hidden="true">
           <ul class="drawer-menu__list">
-            <li class="drawer-menu__item"><a href="#">モーダル</a></li>
             <li class="drawer-menu__item"><a href="#accordion">アコーディオン</a></li>
-            <li class="drawer-menu__item">何か</li>
+            <li class="drawer-menu__item"><a href="#tab">タブ切り替え</a></li>
           </ul>
         </nav>
       </div>
@@ -41,11 +40,31 @@
       <div class="inner">
         <div class="accordion__item">
           <button id="js-accordion-btn" class="js-accordion-btn" type="button" aria-expanded="false" aria-controls="js-accordion-details"><span class="accordion__heading-text">アコーディオン</span></button>
-          <div class="js-accordion-details" aria-hidden="true">なかみ！</div>
+          <div class="js-accordion-details" aria-hidden="true">
+            <div class="details__inner">中身</div>
+          </div>
         </div>
         <div class="accordion__item">
           <button class="js-accordion-btn" type="button" aria-expanded="false" aria-controls="js-accordion-details"><span class="accordion__heading-text">アコーディオン</span></button>
-          <div class="js-accordion-details" aria-hidden="true">なかみ！</div>
+          <div class="js-accordion-details" aria-hidden="true">
+            <div class="details__inner">中身</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tab">
+      <div class="inner">
+        <div class="tab__content">
+          <ul class="tab__list">
+            <li class="tab__item is-active">tab1</li>
+            <li class="tab__item">tab2</li>
+            <li class="tab__item">tab3</li>
+          </ul>
+          <div>
+            <div class="tab is-show">tab1の中身</div>
+            <div class="tab">tab2の中身</div>
+            <div class="tab">tab3の中身</div>
+          </div>
         </div>
       </div>
     </section>

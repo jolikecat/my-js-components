@@ -1,0 +1,39 @@
+#tab {
+  margin-top: 80px;
+}
+
+.tab__content {
+  border: 1px solid rgb(231, 53, 202);
+}
+
+.tab__list {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab__item {
+  width: 33.33%;
+  padding: 20px 0;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(231, 53, 202);
+  transition: .2s;
+
+  &.is-active {
+    border-bottom: none;
+    background-color: rgba(231, 53, 202,0.2);
+  }
+
+  & + & {
+    border-left: 1px solid rgb(231, 53, 202);
+  }
+}
+
+.tab {
+  display:none;
+  padding: 24px;
+
+  &.is-show {
+    display:block;
+  }
+}
